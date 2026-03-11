@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Happy Birthday</title>
+
+<style>
+
+body{
+margin:0;
+text-align:center;
+font-family:Arial;
+background:linear-gradient(to right,#ff9a9e,#fad0c4);
+color:white;
+}
+
+section{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+}
+
+h1{
+font-size:50px;
+}
+
+img{
+width:300px;
+height:350px;
+border-radius:20px;
+margin:20px;
+object-fit:cover;
+}
+
+p{
+font-size:20px;
+width:60%;
+}
+
+button{
+padding:10px 25px;
+font-size:18px;
+border:none;
+border-radius:10px;
+background:white;
+color:#ff4d6d;
+cursor:pointer;
+}
+
+.hidden{
+display:none;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- First Page -->
+<section id="page1">
+
+<h1>❤️ Happiest Birthday Cutiee...❤️ 🎂</h1>
+
+<p>A small surprise website made just for you from me 💖</p>
+
+<button onclick="start()">Start</button>
+
+</section>
+
+
+<!-- Photo Page -->
+<section id="photoPage" class="hidden">
+
+<h1>📸 Our Memories ❤️</h1>
+
+<img id="photo" src="C:/Users/Tummala/Desktop/Birthday website/photo1.jpg.jpeg">
+
+<p id="message">Our first beautiful memory together ❤️</p>
+
+<button onclick="next()">Next</button>
+
+</section>
+
+
+<!-- Final Page -->
+<section id="finalPage" class="hidden">
+
+<h1>❤️🎂 Happiest Birthday my pookie... 🎂❤️</h1>
+
+<p>
+ many many many more happiest birthday❤️‍🩹.you don't know how much i excited for this day.
+ telsa naku letters rayatam chala istam malla show antav ani niku eppudu rayale😅.
+ konchem navvuko kasepu🤧.Meeting you was the Best things that happened in my life🤗.I think
+ manalni destiny ey kalipindi emo.Nen diary kuda rayalsina avasaram ledh emo na sodhi 
+ motham nuvve vintav kadha.mana feelings motham dintlo pettalem😅.you are the most precious
+ one to me.You know evvaru lekapoyina nuvv okkadive vunte chalu anukunta.Even though manam
+ tarwatha matladukomu ani telsina you expressed your feelings.Asal mana vibe okela vuntadi 
+ kabatte inthala navvukuntam like na best friend la anni cheppukunta.Emaina ayithe first
+ thought lo nuvve vasthav niku cheppali ani nyt varaku vunta nuvv call chesthe ippudu varaku
+ aa excitement pole naku.Niku eppudu cheppale kani i like you more than u think💗.nitho 
+ navvukuntu saradhaga ala vundipovalani vuntadi.Konchem annu kuda ardam cheskoye aa nidre 
+ kakunda ni kosam day motham wait chestha eppudu chesthava anii nuvvemo nidra antav ala 
+ godavalu.Ayina aa godavalu kuda baguntay anuko😅.every moment with you feels like cute
+ and beautiful.Thank you for making me smile evrytime I see you😘.Thank You nen inni times
+ aligina,kopam tepinchina enni words anna kani nathone vunnanduku.Telsu le I am very bad
+ at Writing letters but you are such Cutie to me.Hope our bond continue like this 🧿.
+ once again Happiest Birthday my Cutie.....😘🤗💗❤️🎉
+</p>
+
+</section>
+
+
+<script>
+
+let photos=[
+"C:/Users/Tummala/Desktop/Birthday website/photo1.jpg.jpeg",
+"C:/Users/Tummala/Desktop/Birthday website/photo2.jpg.jpeg",
+"C:/Users/Tummala/Desktop/Birthday website/photo3.jpg.jpeg",
+"C:/Users/Tummala/Desktop/Birthday website/photo4.jpg.jpeg"
+];
+
+let messages=[
+"This is one of my First and favorite memories with you ❤️",
+"This photo is For you Disti tagulthadi emo mana photo kii🫣🧿",
+"Haha most funniest one.Kasta padi digina photo oppinchukoni ninnu🤧",
+"And my fav one ❤️‍🩹 📸❤️"
+];
+
+let index=0;
+
+function start(){
+
+document.getElementById("page1").classList.add("hidden");
+document.getElementById("photoPage").classList.remove("hidden");
+
+}
+
+function next(){
+
+index++;
+
+if(index < photos.length){
+
+document.getElementById("photo").src = photos[index];
+document.getElementById("message").innerText = messages[index];
+
+}
+else{
+
+document.getElementById("photoPage").classList.add("hidden");
+document.getElementById("finalPage").classList.remove("hidden");
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
